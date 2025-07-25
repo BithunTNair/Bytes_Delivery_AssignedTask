@@ -8,12 +8,7 @@ const PORT = process.env.PORT;
 const URLRouter = require('./routes/urlRoute')
 
 app.use(express.json());
-
-
-app.use('/api', URLRouter);
-
-
-
+app.use('/', URLRouter);
 
 app.listen(PORT, () => {
     console.log(`SERVER IS RUNNING ON ${PORT}`);

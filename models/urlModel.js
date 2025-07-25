@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const urlSchema = new mongoose.Schema({
-    longURL: {
+    originalURL: {
         type: String
     },
     shortCode:{
@@ -9,6 +9,10 @@ const urlSchema = new mongoose.Schema({
     },
     shortURL:{
         type:String
+    },
+    noOfVisits:{
+        type:Number,
+        default:0
     }
 });
 
